@@ -1,0 +1,452 @@
+*{
+ transition: all 0.5s;
+}
+
+@font-face {
+    font-family: 'chunkfive';
+    src: url("fonts/ChunkFive/Chunkfive.otf") format("opentype");
+}
+
+#owl-demo .item {
+    margin: auto;
+    text-align: center;
+    display: block;
+    width: 60%;
+    height: auto;
+}
+
+/* Loader */
+#loader {
+    position:fixed;
+    margin:0;
+    top:0;
+    left:0;
+    padding-top: 8%;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    background: -webkit-linear-gradient(90deg, #000 10%, #111 90%); /* Chrome 10+, Saf5.1+ */
+    background:    -moz-linear-gradient(90deg, #000 10%, #111 90%); /* FF3.6+ */
+    background:     -ms-linear-gradient(90deg, #000 10%, #111 90%); /* IE10 */
+    background:      -o-linear-gradient(90deg, #000 10%, #111 90%); /* Opera 11.10+ */
+    background:         linear-gradient(90deg, #000 10%, #111 90%); /* W3C */
+    text-align: center;
+}
+
+#loader .fa-power-off {
+    font-size: 45vh;
+    color: #FFF;    
+    display: inline;
+    margin-top: 50%;
+    animation: shine 2s infinite ease-in;
+}
+
+#loader span {
+    font-family: 'Dosis', sans-serif;
+    font-size: 5vh;
+    color: #FFF;
+    animation: shine-loading 2s infinite ease-in;
+}
+
+#dot1 {
+    animation: visibility 2s infinite ease-in;
+}
+
+#dot2 {
+    animation: visibility 2.2s infinite ease-in;
+}
+
+#dot3 {
+    animation: visibility 2.4s infinite ease-in;
+}
+
+@keyframes shine {
+    0% {
+        text-shadow: 0 0 30px #F00;
+    }
+    
+    50% {
+        text-shadow: 0 0 90px #F00;
+    }
+    
+    100% {
+        text-shadow: 0 0 30px #F00;
+    }
+}
+
+@keyframes shine-loading {
+    0% {
+        text-shadow: 0 0 50px #3a3a8a;
+    }
+    
+    50% {
+        text-shadow: 0 0 90px #3a3a8a;
+    }
+    
+    100% {
+        text-shadow: 0 0 50px #3a3a8a;
+    }
+}
+
+@keyframes visibility {
+    0% {
+        visibility: visible;
+    }
+    
+    50% {
+        visibility: hidden;
+    }
+    
+    100% {
+        visibility: hidden;
+    }
+}
+/* End of Loader */
+
+html,body {
+  height:100%;
+  margin:0;
+}
+
+.content {
+  height:100%;
+  min-height:100%;/*for mozilla*/
+}
+
+html>body .content {
+  height:auto;
+}
+
+.wrapper {
+    overflow: hidden;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+}
+
+/* HOME */
+
+#nav {
+    float: right;
+    width: 100%;
+    margin-top: 0.1%;
+    margin-bottom: 13.8%;
+}
+
+#nav ul li{
+    display: inline-block;
+    margin-right: 5%;
+}
+
+#nav ul li a {
+    font-family: 'Dosis', sans-serif;
+    text-transform: uppercase;
+    font-size: 3.5vh;
+    text-decoration: none;
+    color: #e8e8e8;
+}
+
+#nav ul li:hover{
+    transform: scale(1.2);
+}
+
+#home {
+  /*  -webkit-filter: blur(4px);    */
+    background: url(../img/home.jpg);
+    background-attachment: fixed;
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+    /*background: -webkit-linear-gradient(90deg, #000 10%, #111 90%); 
+    background:    -moz-linear-gradient(90deg, #000 10%, #111 90%);
+    background:     -ms-linear-gradient(90deg, #000 10%, #111 90%);
+    background:      -o-linear-gradient(90deg, #000 10%, #111 90%);
+    background:         linear-gradient(90deg, #000 10%, #111 90%);*/
+    text-align: center;
+}
+
+/*
+#home:hover{
+    -webkit-filter: blur(0px);
+}*/
+
+.wrapper-content {
+    clear: both;
+}
+
+#home-text {
+    font-family: 'Dosis', sans-serif;
+    overflow: hidden;
+    text-align: center;
+    clear: both;
+    color: #FFF;
+}
+
+#home-text h2 {
+    margin: auto;
+    width: 100%;
+    font-size: 4.2vh;
+}
+
+#home-title {
+    font-size: 12vh;
+    padding: 1.1%;
+}
+
+#home-title span {
+    color: #c12;
+}
+
+.logo {
+    max-width: 60%;
+}
+
+/* END OF HOME */
+
+#acerca {
+  background-color: #555;
+}
+
+/* SERVICIOS */
+
+#servicios {
+ /* background-color: #000; */
+    background: url(../img/service.jpg);
+    background-attachment: fixed;
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#servicios-title {
+    text-shadow: 10px 5px 6px #101010;
+    padding-top: 1%;
+    color: #fff;
+    font-family: 'Dosis', sans-serif;
+    text-align: center;
+    font-size: 12vh;
+}
+
+#item-servicios {
+    overflow: hidden;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    margin-top: 5%;
+}
+
+.item-service {
+    margin: 1%;
+    float: left;
+    text-align: center;
+    overflow: hidden;
+    width: 31.3%;
+    min-width: 125px;
+    min-height: 150px;
+}
+
+.item-service i {
+    font-size: 12vh;
+}
+
+.fa-television {
+    padding-bottom: 4%;
+    animation: icon-shining 2.4s infinite ease-in;
+    color: #fff;
+}
+
+.fa-wrench {
+    padding-bottom: 4%;
+    animation: icon-shining 2.4s infinite ease-in;
+    color: #fff;
+}
+
+.fa-video-camera {
+    padding-bottom: 4%;
+    animation: icon-shining 2.4s infinite ease-in;
+    color: #fff;
+}
+
+.item-service span{
+    text-transform: uppercase;
+    font-family: chunkfive;
+    color: #fff;
+    font-size: 2.5vw;
+    text-shadow: 10px 5px 6px #101010;
+    word-wrap: break-word;
+}
+
+.item-title {
+    background: linear-gradient(90deg,rgba(255,255,255,0) 0,rgba(255,255,255,0.2) 50%,rgba(255,255,255,0) 100%);
+    background-size: 100% 1px;
+    background-repeat: no-repeat;
+    padding-top: 5%;
+    padding-bottom: 5%;
+}
+
+.item-service a {
+  background: -webkit-linear-gradient(90deg, #e43a15 10%, #e65245 90%); /* Chrome 10+, Saf5.1+ */
+  background:    -moz-linear-gradient(90deg, #e43a15 10%, #e65245 90%); /* FF3.6+ */
+  background:     -ms-linear-gradient(90deg, #e43a15 10%, #e65245 90%); /* IE10 */
+  background:      -o-linear-gradient(90deg, #e43a15 10%, #e65245 90%); /* Opera 11.10+ */
+  background:         linear-gradient(90deg, #e43a15 10%, #e65245 90%); /* W3C */        
+    border: 1px solid #444;
+    text-shadow: 4px 3px 4px #101010;
+    color: #fff;
+    text-decoration: none;
+    font-family: 'Dosis', sans-serif;
+    font-weight: 600;
+    padding: 4.2%;
+}
+
+.item-service a:hover {
+    text-shadow: 7px 6px 8px #101010;
+}
+
+@keyframes icon-shining {
+    0% {
+        text-shadow: 1px 2px 5px #ee000e;
+    }
+    
+    50% {
+        text-shadow: 1px 2px 50px #ee000e;
+    }
+    
+    100% {
+        text-shadow: 1px 2px 5px #ee000e;
+    }
+}
+
+/* END OF SERVICIOS */
+
+/*  CONTACT US */
+
+#contactenos {
+ /* background-color: #000; */
+    background: url(../img/contact-us-wallpaper.png);
+    background-attachment: fixed;
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#nav-contact .fa-envelope-o, #nav-contact .fa-money, #nav-contact .fa-map {
+    font-size: 8.5vw;
+}
+
+#nav-contact {
+    text-shadow: 0 0 30px #000;
+    text-align: center;
+    float: right;
+    width: 100%;
+    margin-top: 20vh;
+    margin-bottom: 4vh;
+}
+
+#space {
+    clear: both;
+    height: 0.14vw;
+    background: linear-gradient(90deg,rgba(255,255,255,0) 0,rgba(255,255,255,0.2) 50%,rgba(255,255,255,0) 100%);
+}
+
+#nav-contact ul li {
+    display: inline-block;
+    margin-right: 13%;
+    text-align: center;
+}
+
+#nav-contact ul li a {
+    font-family: 'Dosis', sans-serif;
+    text-transform: uppercase;
+    font-size: 4.5vh;
+    text-decoration: none;
+    color: #e8e8e8;
+    transition: all 0.01s;
+}
+
+#nav-contact ul li p:hover {
+    transform: scale(1.1);
+}
+
+#nav-contact ul li a:hover {
+    text-shadow: 0 0 30px #F00;
+}
+
+#info {
+    padding-bottom: 4vh;
+    opacity: 0.9;
+    font-family: 'Dosis', sans-serif;
+    color: #D7D7D7;
+    font-size: 3vh;
+    overflow: auto;
+    clear: both;
+    text-align: center;
+}
+
+.embed-container {
+    display: none; /* CHECK LATER */
+    z-index: 1000;
+    position: absolute; 
+    padding-bottom: 56.25%; 
+    height: 0; 
+    overflow: hidden; 
+    max-width: 100%;
+}
+
+.embed-container iframe {
+  /* pointer-events: none; */
+}
+
+.embed-container iframe, .embed-container object, .embed-container embed {
+    padding-left: 5%;
+    padding-top: 0.8%;
+    position: absolute;
+    top: 0; 
+    left: 0; 
+    width: 90%; 
+    height: 95%; 
+}
+
+/* END OF CONTACT US */
+
+#five {
+  background-color: #000;
+}
+
+.cd-scroll-down {
+    position: absolute;
+    left: 50%;
+    right: auto;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    transform: translateX(-50%);
+    bottom: 20px;
+    width: 38px;
+    height: 44px;
+    background: url("../img/cd-arrow-bottom.svg") no-repeat center top;
+    background-size: 2.37em;
+}
+
+.cd-img-replace {
+    /* replace text with a background-image */
+    display: inline-block;
+    overflow: hidden;
+    text-indent: 100%;
+    white-space: nowrap;
+    animation: bounce 1.2s infinite ease-in;
+}
+
+@keyframes bounce {
+    0% {
+        transform: translateY(-50%);
+    }
+    50% {
+        transform: translateY(-15%);
+    }
+    100% {
+        transform: translateY(-50%);
+    }
+}
