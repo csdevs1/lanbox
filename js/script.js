@@ -1,13 +1,30 @@
 $(window).load(function() {
   $("#loader").delay(3000).fadeOut("slow");
+  $("#loader").delay(3000).fadeOut("slow");
+});
+
+$(document).mouseup(function (e)
+{   
+    function containerClose($cont){
+        var container = $cont;
+        if (!container.is(e.target) // if the target of the click isn't the container...
+            && container.has(e.target).length === 0) // ... nor a descendant of the container
+        {
+            $cont.css("display", "none");
+            $("#fade").css("display", "none");
+        }
+    }
+    
+    containerClose($("#light"));
 });
 
 var ready;
 
-ready = (function() {
+ready = (function() {    
     setTimeout(function(){
             $("#loader").remove();
     }, 6000);
+    
   $("#owl-demo").owlCarousel({
       navigation : false, // Show next and prev buttons
       slideSpeed : 300,
