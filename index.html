@@ -81,7 +81,7 @@
                     <nav id="nav-contact">
                         <ul>
                             <li><a href="#"><i class="fa fa-envelope-o"></i><p>Escribenos</p></a></li>
-                            <li><a href="#"><i class="fa fa-money"></i><p>Metodos de pagos</p></a></li>
+                            <li><a href="javascript:void(0)" onclick="document.getElementById('payment').style.display='block';document.getElementById('fade').style.display='block'"><i class="fa fa-money"></i><p>Metodos de pagos</p></a></li>
                             <li><a href="javascript:void(0)" onclick="document.getElementById('light').style.display='block';document.getElementById('fade').style.display='block'"><i class="fa fa-map"></i><p>mapa</p></a></li>
                         </ul>                        
                     </nav>
@@ -96,7 +96,10 @@
                     </span>
                 </div>
                 <div id="space"></div>
-                <div id="light" class="white_content">This is the lightbox content. <a href = "javascript:void(0)" onclick = "document.getElementById('light').style.display='none';document.getElementById('fade').style.display='none'">Close</a></div>
+                <div id="light" class="white_content">This is the Map content. <a href = "javascript:void(0)" onclick = "document.getElementById('light').style.display='none';document.getElementById('fade').style.display='none'">Close</a></div>
+                
+                <div id="payment" class="white_content">This is the Payment content. <a href = "javascript:void(0)" onclick = "document.getElementById('payment').style.display='none';document.getElementById('fade').style.display='none'">Close</a></div>
+                
                 <div id="fade" class="black_overlay"></div>
             </div>
         </div>

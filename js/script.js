@@ -1,10 +1,15 @@
 $(window).load(function() {
-  $("#loader").delay(3000).fadeOut("slow");
-  $("#loader").delay(3000).fadeOut("slow");
+    /*
+        Note: Stop page scrolling while loading.
+    */
+    $("#loader").delay(4000).fadeOut("slow");
+    $('html, body').css({ 'overflow': 'hidden', 'height': '100%' }).delay(4000);
+    setTimeout(function(){
+        $('html, body').removeAttr('style');
+    }, 4100);
 });
 
-$(document).mouseup(function (e)
-{   
+$(document).mouseup(function (e) {
     function containerClose($cont){
         var container = $cont;
         if (!container.is(e.target) // if the target of the click isn't the container...
@@ -16,6 +21,7 @@ $(document).mouseup(function (e)
     }
     
     containerClose($("#light"));
+    containerClose($("#payment"));
 });
 
 var ready;
@@ -23,7 +29,7 @@ var ready;
 ready = (function() {    
     setTimeout(function(){
             $("#loader").remove();
-    }, 6000);
+    }, 4100);
     
   $("#owl-demo").owlCarousel({
       navigation : false, // Show next and prev buttons
