@@ -12,8 +12,7 @@
         <link href='https://fonts.googleapis.com/css?family=Dosis:400,500,600&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
         <script src="https://code.jquery.com/jquery-2.1.4.js"></script>
         <script src="js/script.js"></script>
-        <script src="js/jquery.mousewheel.min.js"></script>
-        <script src="js/jquery.scrollTo.min.js"></script>
+        <script src="js/smoothScroll.js"></script>
         <script src="js/owl.carousel.js"></script>
     </head>
     <body>
@@ -74,15 +73,12 @@
         </div>
         <div class='content' id='contactenos'>
             <div class="wrapper">
-                <div class='embed-container'>
-                 <!--   <iframe src="https://www.google.com/maps/d/embed?pb=!1m14!1m12!1m3!1d3925.976313445235!2d-67.57991249999999!3d10.26349194444444!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sve!4v1444426718427&mid=zQWXgAI4yDWQ.kH7bKXyix5tI" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe> -->
-                </div>
                 <header>
                     <nav id="nav-contact">
                         <ul>
-                            <li><a href="#"><i class="fa fa-envelope-o"></i><p>Escribenos</p></a></li>
-                            <li><a href="javascript:void(0)" onclick="document.getElementById('payment').style.display='block';document.getElementById('fade').style.display='block'"><i class="fa fa-money"></i><p>Metodos de pagos</p></a></li>
-                            <li><a href="javascript:void(0)" onclick="document.getElementById('light').style.display='block';document.getElementById('fade').style.display='block'"><i class="fa fa-map"></i><p>mapa</p></a></li>
+                            <li><a href=""><i class="fa fa-envelope-o"></i><p>Escribenos</p></a></li>
+                            <li><a href="javascript:void(0)" onclick="$('#payment').show(100); $('#fade').show();"><i class="fa fa-money"></i><p>Metodos de pagos</p></a></li>
+                            <li><a id="map-btn"><i class="fa fa-map"></i><p>mapa</p></a></li>
                         </ul>                        
                     </nav>
                 </header>
@@ -96,9 +92,19 @@
                     </span>
                 </div>
                 <div id="space"></div>
-                <div id="light" class="white_content">This is the Map content. <a href = "javascript:void(0)" onclick = "document.getElementById('light').style.display='none';document.getElementById('fade').style.display='none'">Close</a></div>
                 
-                <div id="payment" class="white_content">This is the Payment content. <a href = "javascript:void(0)" onclick = "document.getElementById('payment').style.display='none';document.getElementById('fade').style.display='none'">Close</a></div>
+                <div id="map" class="white_content">
+                    <p>
+                        <a href = "javascript:void(0)" onclick = "$('#map').hide(100); $('#fade').hide();"><span>Cerrar</span> <i class="fa fa-reply"></i></a>
+                    </p>
+                    <div class='embed-container'>
+                    </div>
+                </div>
+                
+                <div id="payment" class="white_content">This is the Payment content.
+                    <a href = "javascript:void(0)" onclick = "$('#payment').hide(100); $('#fade').hide();"><span>Cerrar</span> <i class="fa fa-reply"></i>
+</a>
+                </div>
                 
                 <div id="fade" class="black_overlay"></div>
             </div>

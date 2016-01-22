@@ -2,34 +2,36 @@ $(window).load(function() {
     /*
         Note: Stop page scrolling while loading.
     */
-    $("#loader").delay(4000).fadeOut("slow");
-    $('html, body').css({ 'overflow': 'hidden', 'height': '100%' }).delay(4000);
+    $("#loader").delay(3000).fadeOut("slow");
+    $('html, body').css({ 'overflow': 'hidden', 'height': '100%' }).delay(3000);
     setTimeout(function(){
         $('html, body').removeAttr('style');
-    }, 4100);
+    }, 3799);
 });
-
+/*
 $(document).mouseup(function (e) {
     function containerClose($cont){
         var container = $cont;
         if (!container.is(e.target) // if the target of the click isn't the container...
             && container.has(e.target).length === 0) // ... nor a descendant of the container
         {
-            $cont.css("display", "none");
-            $("#fade").css("display", "none");
+            $cont.hide('fast');
+            $("#fade").hide();
+            $('#').remove('iframe');
         }
     }
     
-    containerClose($("#light"));
+    containerClose($("#map"));
     containerClose($("#payment"));
 });
+*/
 
 var ready;
 
-ready = (function() {    
+ready = (function() {
     setTimeout(function(){
             $("#loader").remove();
-    }, 4100);
+    }, 4500);
     
   $("#owl-demo").owlCarousel({
       navigation : false, // Show next and prev buttons
@@ -45,6 +47,13 @@ ready = (function() {
       // itemsTablet: false,
       // itemsMobile : false
   });
+    
+    $( "#map-btn" ).click(function() {
+        $( '<iframe src="https://www.google.com/maps/d/embed?pb=!1m14!1m12!1m3!1d3925.976313445235!2d-67.57991249999999!3d10.26349194444444!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sve!4v1444426718427&mid=zQWXgAI4yDWQ.kH7bKXyix5tI"></iframe>' ).appendTo( ".embed-container" );
+        $("#map").show(100); 
+        $("#fade").show();
+    });
+
     
     //smooth scroll to second section
     $('.cd-scroll-down').on('click', function(event){
